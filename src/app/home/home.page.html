@@ -19,7 +19,8 @@
       <h2>Conheça nossas Cervejas</h2>
       <br/>
       <div *ngFor="let cerveja of cervejas">
-        <ion-card>
+        <ion-card (click)="detalhes(cerveja.nome)">
+
           <ion-card-content>
               <h2>
                   {{cerveja.nome}}
@@ -28,7 +29,7 @@
                 {{cerveja.descricao}}
               </p>
               <p style="text-align: right">
-                <ion-button color="danger" fill="outline" size='small' (click)="Excluir (cerveja.nome)">Excluir</ion-button>
+                <ion-button color="danger" fill="outline" size='small' (click)="Excluir(cerveja.nome)">Excluir</ion-button>
               </p>
           </ion-card-content>
           </ion-card>
